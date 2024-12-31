@@ -33,56 +33,19 @@
     animation: word 5s infinite;
 
 }
-#head .head-content h4::after{
-    content: "";
-}
-@keyframes word {
-    0%{
-        content:"d" ;
-    }
-    10%{
-        content:"de";
-    }
-    20%{
-        content:"dev";
-    }
-    30%{
-        content:"deve";
-    }
-    40%{
-        content:"devel";
-    }
-    50%{
-        content:"develo";
-    }
-    60%{
-        content:"develop";
-
-    }
-    70%{
-        content:"develope";
-    }
-    80%{
-        content:"developer";
-    }
-    
-
-    
-}
-
-
 /* -------------------------------about------------------------------------------------ */
 .about {
-
     margin-left: 180px;
     width: 350px;
     height: 350px;
     border: RGB(85, 85, 85) solid 8px;
 }
+
 .image-container {
-    position: relative; 
+    position: relative;
     overflow: hidden;
 }
+
 .back {
     position: absolute;
     top: 100%;
@@ -97,7 +60,6 @@
     top: 0;
 }
 
-
 .dashed-line {
     border-top: 1px dashed #6c757d;
     margin: 20px 0;
@@ -105,7 +67,57 @@
 
 #about ul .list li {
     list-style-type: none;
+}
 
+/* Media Query for Mobile Screens */
+@media (max-width: 767px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center the content */
+    }
+
+    /* Increase the image and border size for small screens */
+    .about {
+        width: 350px; /* Make the image container bigger */
+        height: 350px; /* Increase the height */
+        border: RGB(85, 85, 85) solid 12px; /* Increase the border thickness */
+    }
+
+    .image-container {
+        width: 100%; /* Ensure the image fills the container */
+    }
+
+    /* Ensure the image comes above the text on small screens */
+    .col-md-4 {
+        order: -1;  /* Moves the image section above the text section */
+    }
+
+    .col-md-8 {
+        order: 1;   /* Keeps the text section in the same place */
+    }
+
+    /* Optional adjustments for spacing and font sizes */
+    .image-container {
+        margin-bottom: 20px; /* Adds space below the image */
+    }
+
+    .btn {
+        width: 100%; /* Full-width buttons on mobile */
+        margin-top: 10px;
+    }
+
+    h2 {
+        font-size: 20px; /* Adjust heading size for mobile */
+    }
+
+    p {
+        font-size: 14px; /* Adjust paragraph font size for mobile */
+    }
+
+    .fs-4 {
+        font-size: 16px; /* Adjust icon font size for mobile */
+    }
 }
 
 /* -------------------------------------------------------------------------------------- */
